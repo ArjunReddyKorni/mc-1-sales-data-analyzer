@@ -68,6 +68,14 @@ public class SalesDataAnalyzer {
        return salesData;
     }
 
+    // Find the top customer who spent the maximum time on the site
+    public SalesRecord getTopCustomerWhoSpentMaxTimeOnSite(List<SalesRecord> salesData,TimeOnSiteComparator timeOnSiteComparator){
+
+       Collections.sort(salesData,timeOnSiteComparator);
+
+       SalesRecord customer = salesData.get(0);
+        return customer;
+    }
 
 
 
