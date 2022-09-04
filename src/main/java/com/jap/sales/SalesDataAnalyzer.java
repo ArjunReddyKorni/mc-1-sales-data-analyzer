@@ -62,6 +62,11 @@ public class SalesDataAnalyzer {
     }
 
     // Sort the customers based on purchase amount
+    public List<SalesRecord> getAllCustomersSortedByPurchaseAmount(List<SalesRecord> salesData, AmountComparator amountComparator){
+
+       Collections.sort(salesData,amountComparator);
+       return salesData;
+    }
 
 
 
